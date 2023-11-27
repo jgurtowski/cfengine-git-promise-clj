@@ -1,0 +1,2 @@
+{:paths ["src"]
+ :deps {cfengine-promise-protocol/cfengine-promise-protocol {:local/root "../cfengine-promise-protocol"}}}
