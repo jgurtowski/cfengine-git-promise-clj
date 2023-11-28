@@ -90,7 +90,7 @@
 ;;      "{\"operation\": \"terminate\", \"log_level\": \"info\"}\n"))
 
 ;; (def example-input
-;;   (BufferedReader. (StringReader. example-input-str)))
+;;   (StringReader. example-input-str))
 
 (defn -main [& args]
   (cfepp/start-promise-module (BufferedReader. *in*)
@@ -98,4 +98,5 @@
                               "0.0.1"
                               ::promiser
                               ::promise-attributes
-                              evaluate-promise))
+                              evaluate-promise)
+  (System/exit 0));;why?

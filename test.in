@@ -1,0 +1,6 @@
+cf-agent 3.16.0 v1
+
+
+{"operation": "validate_promise", "log_level": "info", "promise_type": "git", "promiser": "/home/james/hub-masterfiles2", "attributes": {"repo": "/git/pulsar-cfengine-masterfiles"}}
+{"operation": "evaluate_promise", "log_level": "info", "promise_type": "git", "promiser": "/home/james/hub-masterfiles2", "attributes": {"repo": "/git/pulsar-cfengine-masterfiles"}}
+{"operation": "terminate", "log_level": "info"}
