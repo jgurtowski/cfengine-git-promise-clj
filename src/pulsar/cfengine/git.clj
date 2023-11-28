@@ -1,4 +1,5 @@
-(ns cfengine-git
+(ns pulsar.cfengine.git
+  (:gen-class)
   (:require
    [clojure.java.io :as io]
    [clojure.java.shell :refer [sh]]
@@ -7,6 +8,7 @@
    [cfengine-promise-protocol :as cfepp])
   (:import
    [java.io BufferedReader StringReader]))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Verification Specs for Promiser and Attributes (validate_promise)
@@ -90,9 +92,10 @@
 ;; (def example-input
 ;;   (BufferedReader. (StringReader. example-input-str)))
 
-(cfepp/start-promise-module (BufferedReader. *in*)
-                             "git_promise_module_clj"
-                             "0.0.1"
-                             ::promiser
-                             ::promise-attributes
-                             evaluate-promise)
+(defn -main [& args]
+  (cfepp/start-promise-module (BufferedReader. *in*)
+                              "git_promise_module_clj"
+                              "0.0.1"
+                              ::promiser
+                              ::promise-attributes
+                              evaluate-promise))
